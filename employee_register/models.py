@@ -6,7 +6,10 @@ from django.db import models
 # For any model there will be a primary key that will be created by the django ORM.
 # it will be ID starts from 1 and increments .
 class Position(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=50) 
+
+    def __str__(self):
+        return self.title
 
 
 class Employee(models.Model):
@@ -18,7 +21,7 @@ class Employee(models.Model):
 
 # python manage.py makemigrations makes a 0001 file where it converts the models to corresponding python code.
 
-# python manage.py sqlmigrate employee_register 0001 => running this gives the sql code to do the same modifications    
+# python manage.py sqlmigrate employee_register 0001 => running this gives the sql code to do the same modifications
 # BEGIN;
 # --
 # -- Create model Position
