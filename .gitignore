@@ -1,0 +1,20 @@
+# Ignore the environment file
+.env
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore Django migrations
+db.sqlite3
+
+# Ignore IDE/project-specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore static files (if applicable)
+staticfiles/
+
+# Ignore media files (if applicable)
+media/
